@@ -134,7 +134,7 @@ elseif game.PlaceId == 3956818381 then
         end
     end)
 
-elseif    game.PlaceId == 155615604 then
+elseif    game.PlaceId == 734159876 then
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
 
@@ -145,8 +145,11 @@ elseif    game.PlaceId == 155615604 then
     PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
-    PlayerSection:NewButton("Execute", "Executes PepsiByte", function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/rbyem4Tr"))()
+    local PB = Window:NewTab("PepsiByte")
+    local PBPlayerSection = PB:NewSection("Load")
+
+    PBPlayerSection:NewButton("Execute", "Executes PepsiByte", function()
+        loadstring(game:GetObjects("rbxassetid://3623753581")[1].Source)()
     end)
 else
     local Player = Window:NewTab("Player")
