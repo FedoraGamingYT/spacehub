@@ -145,10 +145,7 @@ elseif    game.PlaceId == 155615604 then
     PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
-    local PB = Window:NewTab("PepsiByte")
-    local PBPlayerSection = PB:NewSection("Load")
-
-    PBPlayerSection:NewButton("Execute", "Executes PepsiByte", function()
+    PlayerSection:NewButton("Execute", "Executes PepsiByte", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/rbyem4Tr"))()
     end)
 else
