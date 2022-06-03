@@ -151,6 +151,21 @@ elseif    game.PlaceId == 734159876 then
     PBPlayerSection:NewButton("Execute", "Executes PepsiByte", function()
         loadstring(game:GetObjects("rbxassetid://3623753581")[1].Source)()
     end)
+elseif    game.PlaceId == 5897938254 then
+    local Chat = Window:NewTab("Chat")
+    local playername = nil
+    local ChatSection = Player:NewSection("Player Selected: "..player)
+    ChatSection:NewTextBox("Player Name", "Must be exact player name to work!", function(txt)
+        playername = txt
+    end)
+    ChatSection:NewTextBox("Message", "Message to send as player", function(txt)
+        local args = {
+            [1] = "General",
+            [2] = txt,
+            [3] = game:GetService("Players"):WaitForChild(playername)
+        }
+        game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
+    end)    
 else
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
