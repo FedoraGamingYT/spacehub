@@ -230,11 +230,16 @@ for i,v in pairs(game.Players:GetPlayers())do
         end
         while enabled2 do
         local messages = {
-            "This server has been NUKED by Chernobyl Reactor 4 Unit. Please wear your masks.",
-            "LEAVE OR YOUR IP WILL BE LEAKED.",
-            "YOU MAY STOP PLAYING THE GAME AND LEAVE. YOU WILL BE HACKED.",
-            "BOMBED & HACKED BY tony80112"
+            "GO PLAY BROOKHAVEN OR "..playername" WILL HACK YOU IN YOUR SLEEP AND STEAL YOUR ROBUX",
+            "LEAVE OR YOUR IP WILL BE LEAKED BY: "..playername,
+            "DETONATED BY: "..playername,
+            "BOMBED BY: "..playername
         }
+        if playername == nil then
+            playername = "YOUR MOM"
+        else
+            print("yes")
+        end
         local args = {
             [1] = "General",
             [2] = messages[math.random(1, #messages)],
