@@ -190,6 +190,22 @@ for i,v in pairs(game.Players:GetPlayers())do
         }
         game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
     end)    
+    ChatSection:NewButton("Chernobyl The Selected Person", "Bomb radio with the hub with the specific person", function()
+        while true do
+        local messages = {
+            "YOKES HUB ON TOP! .gg/T7CpxxGbPH",
+            "YOKES IS THE BEST! .gg/T7CpxxGbPH",
+            ".gg/yokeshub",
+            "BOMBED BY YOKES HUB .gg/T7CpxxGbPH"
+        }
+        local args = {
+            [1] = "General",
+            [2] = messages[math.random(1, #messages)],
+            [3] = game:GetService("Players"):WaitForChild(playername)
+        }
+        game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
+    end
+    end)
     ChatSection:NewButton("Chernobyl The Radio", "Bomb radio with the hub", function()
         while true do
         local messages = {
