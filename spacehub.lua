@@ -193,10 +193,10 @@ for i,v in pairs(game.Players:GetPlayers())do
     ChatSection:NewButton("Chernobyl The Radio", "Bomb radio with the hub", function()
         while true do
         local messages = {
-            "YOKES HUB ON TOP! .gg/yokeshub",
-            "YOKES IS THE BEST! .gg/yokeshub",
+            "YOKES HUB ON TOP! .gg/T7CpxxGbPH",
+            "YOKES IS THE BEST! .gg/T7CpxxGbPH",
             ".gg/yokeshub",
-            "BOMBED BY YOKES HUB .gg/yokeshub"
+            "BOMBED BY YOKES HUB .gg/T7CpxxGbPH"
         }
         local args = {
             [1] = "General",
