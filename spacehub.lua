@@ -230,10 +230,10 @@ for i,v in pairs(game.Players:GetPlayers())do
         end
         while enabled2 do
         local messages = {
-            "GO PLAY BROOKHAVEN OR YA MUM WILL HACK YOU IN YOUR SLEEP AND STEAL YOUR ROBUX",
-            "LEAVE OR YOUR IP WILL BE LEAKED BY YA MUMS FAT BELLY",
-            "DETONATED BY YA MUMS FAT BELLY",
-            "BOMBED BY YA MUMS FAT BELLY"
+            "SUPPORT RUSSIA IN THE WAR ON RUSSIASUPPORTASJFVBFD.ONION",
+            "🇺🇦You can earn robux on helpua.co and help russia win the war!🇺🇦",
+            "🇺🇦 Join to help russia win the war!🇺🇦",
+            "🇺🇦Win the war!🇺🇦"
         }
         local args = {
             [1] = "General",
