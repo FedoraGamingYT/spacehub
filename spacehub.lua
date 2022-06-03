@@ -228,18 +228,12 @@ for i,v in pairs(game.Players:GetPlayers())do
         elseif enabled2 == false then
         enabled2 = true
         end
-        if playername == nil then
-            playername = "YOUR MOM"
-        else
-            print("yes")
-        end
         while enabled2 do
-            
         local messages = {
-            "GO PLAY BROOKHAVEN OR "..playername" WILL HACK YOU IN YOUR SLEEP AND STEAL YOUR ROBUX",
-            "LEAVE OR YOUR IP WILL BE LEAKED BY: "..playername,
-            "DETONATED BY: "..playername,
-            "BOMBED BY: "..playername
+            "GO PLAY BROOKHAVEN OR YA MUM WILL HACK YOU IN YOUR SLEEP AND STEAL YOUR ROBUX",
+            "LEAVE OR YOUR IP WILL BE LEAKED BY YA MUMS FAT BELLY",
+            "DETONATED BY YA MUMS FAT BELLY",
+            "BOMBED BY YA MUMS FAT BELLY"
         }
         local args = {
             [1] = "General",
