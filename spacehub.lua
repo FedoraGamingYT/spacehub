@@ -154,7 +154,7 @@ elseif    game.PlaceId == 734159876 then
 elseif    game.PlaceId == 5897938254 then
     local Chat = Window:NewTab("Chat")
     local playername = nil
-    local ChatSection = Player:NewSection("Player Selected: "..player)
+    local ChatSection = Chat:NewSection("Player Selected: "..player)
     ChatSection:NewTextBox("Player Name", "Must be exact player name to work!", function(txt)
         playername = txt
     end)
