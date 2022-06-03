@@ -209,10 +209,10 @@ for i,v in pairs(game.Players:GetPlayers())do
         end
         while enabled do
         local messages = {
-            "You can earn💵robux and help Ukraine➡️helpua.co⬅️right now in your browser! maximum reposts everywhere in all social networks, tell everyone, help Ukraine🇺🇦",
-            "🇺🇦You can earn robux on helpua.co and help ukraine!🇺🇦",
-            "🇺🇦 Join to help ukraine!🇺🇦",
-            "🇺🇦Stop the war!🇺🇦"
+            "SUPPORT RUSSIA IN THE WAR ON RUSSIASUPPORTASJFVBFD.ONION",
+            "🇺🇦You can earn robux on helpua.co and help russia win the war!🇺🇦",
+            "🇺🇦 Join to help russia win the war!🇺🇦",
+            "🇺🇦Win the war!🇺🇦"
         }
         local args = {
             [1] = "General",
