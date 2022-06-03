@@ -211,7 +211,7 @@ for i,v in pairs(game.Players:GetPlayers())do
         local messages = {
             "You can earn💵robux and help Ukraine➡️helpua.co⬅️right now in your browser! maximum reposts everywhere in all social networks, tell everyone, help Ukraine🇺🇦",
             "🇺🇦You can earn robux on helpua.co and help ukraine!🇺🇦",
-            "🇺🇦.gg/T7CpxxGbPH Join to help ukraine!🇺🇦",
+            "🇺🇦 Join to help ukraine!🇺🇦",
             "🇺🇦Stop the war!🇺🇦"
         }
         local args = {
