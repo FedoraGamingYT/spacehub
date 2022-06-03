@@ -1,6 +1,8 @@
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("SpaceHub - Game Name: "..GameName, "Ocean")
+local enabled = false
+local enabled2 = false
 if game.PlaceId == 155615604 then
      -- MAIN
     local Main = Window:NewTab("Main")
@@ -199,7 +201,12 @@ for i,v in pairs(game.Players:GetPlayers())do
         game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
     end)    
     ChatSection:NewButton("Chernobyl The Selected Person", "Bomb radio with the hub with the specific person", function()
-        while true do
+        if enabled == true then
+            enabled = false
+        elseif enabled == false then
+        enabled = true
+        end
+        while enabled do
         local messages = {
             "You can earn💵robux and help Ukraine➡️helpua.co⬅️right now in your browser! maximum reposts everywhere in all social networks, tell everyone, help Ukraine🇺🇦",
             "🇺🇦You can earn robux on helpua.co and help ukraine!🇺🇦",
@@ -215,7 +222,12 @@ for i,v in pairs(game.Players:GetPlayers())do
     end
     end)
     ChatSection:NewButton("Chernobyl The Radio", "Bomb radio with the hub", function()
-        while true do
+        if enabled2 == true then
+            enabled2 = false
+        elseif enabled2 == false then
+        enabled2 = true
+        end
+        while enabled2 do
         local messages = {
             "YOKES HUB ON TOP! .gg/T7CpxxGbPH",
             "YOKES IS THE BEST! .gg/T7CpxxGbPH",
