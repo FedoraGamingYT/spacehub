@@ -155,9 +155,33 @@ elseif  game.PlaceId == 5897938254 then
     local Chat = Window:NewTab("Chat")
     local playername = "None"
     local ChatSection = Chat:NewSection("Chat as player on radio")
-    ChatSection:NewTextBox("Player Name", "Must be exact player name to work!", function(txt)
-        playername = txt
-    end)
+local newList = {}
+for i,v in pairs(game.Players:GetPlayers())do
+    if v ~= game.Players.LocalPlayer then
+        table.insert(newList,v.Name)
+    end
+ end
+      local dropdown = ChatSection:NewDropdown("Player Selection","Select Player", newList, function(selection)
+        playername = selection
+      end)
+      game.Players.PlayerAdded:Connect(function(player)
+        local name = player.Name
+        table.insert(newList,name)
+        dropdown:Refresh(newList)
+     end)
+     
+     game.Players.PlayerRemoving:Connect(function(player)
+        local name = player.Name
+        for i,v in pairs(newList)do
+            if v == name then  
+                table.remove(newList,i)
+            end
+        end
+        dropdown:Refresh(newList)
+     end)
+      ChatSection:NewButton("refresh players", "refresh players daddy", function()
+        dropdown:Refresh(newList) -- we have python at school and ppl learning functions and shit and someone made some type of calculator and its erroring cause of a syntax thing and i said its something with the grammar of the code and he though it was that the code got corrupted
+      end)
     ChatSection:NewTextBox("Message", "Message to send as player PRESS ENTER ONCE MESSAGE IS PUT IN", function(txt)
         local args = {
             [1] = "General",
