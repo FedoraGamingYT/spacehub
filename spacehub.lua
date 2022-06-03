@@ -151,14 +151,14 @@ elseif    game.PlaceId == 734159876 then
     PBPlayerSection:NewButton("Execute", "Executes PepsiByte", function()
         loadstring(game:GetObjects("rbxassetid://3623753581")[1].Source)()
     end)
-elseif    game.PlaceId == 5897938254 then
+elseif  game.PlaceId == 5897938254 then
     local Chat = Window:NewTab("Chat")
     local playername = "None"
-    local ChatSection = Chat:NewSection("Player Selected: "..playername)
+    local ChatSection = Chat:NewSection("Chat as player on radio")
     ChatSection:NewTextBox("Player Name", "Must be exact player name to work!", function(txt)
-        txt = playername
+        playername = txt
     end)
-    ChatSection:NewTextBox("Message", "Message to send as player", function(txt)
+    ChatSection:NewTextBox("Message", "Message to send as player PRESS ENTER ONCE MESSAGE IS PUT IN", function(txt)
         local args = {
             [1] = "General",
             [2] = txt,
