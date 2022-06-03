@@ -3,6 +3,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("SpaceHub - Game Name: "..GameName, "Ocean")
 local enabled = false
 local enabled2 = false
+local enabled3 = false
 if game.PlaceId == 155615604 then
      -- MAIN
     local Main = Window:NewTab("Main")
@@ -229,10 +230,10 @@ for i,v in pairs(game.Players:GetPlayers())do
         end
         while enabled2 do
         local messages = {
-            "YOKES HUB ON TOP! .gg/T7CpxxGbPH",
-            "YOKES IS THE BEST! .gg/T7CpxxGbPH",
-            ".gg/yokeshub",
-            "BOMBED BY YOKES HUB .gg/T7CpxxGbPH"
+            "This server has been NUKED by Chernobyl Reactor 4 Unit. Please wear your masks.",
+            "LEAVE OR YOUR IP WILL BE LEAKED.",
+            "YOU MAY STOP PLAYING THE GAME AND LEAVE. YOU WILL BE HACKED.",
+            "BOMBED & HACKED BY tony80112"
         }
         local args = {
             [1] = "General",
