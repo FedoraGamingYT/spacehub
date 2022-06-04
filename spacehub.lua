@@ -165,6 +165,12 @@ elseif    game.PlaceId == 734159876 then
 elseif  game.PlaceId == 5897938254 then
     local Chat = Window:NewTab("Chat")
     local playername = "None"
+    local channel = "General"
+    local channels = {
+        "General",
+        "Combative",
+        "Hostiles"
+      }
     local ChatSection = Chat:NewSection("Chat as player on radio")
 local newList = {}
 for i,v in pairs(game.Players:GetPlayers())do
@@ -172,6 +178,9 @@ for i,v in pairs(game.Players:GetPlayers())do
         table.insert(newList,v.Name)
     end
  end
+ local channeldropdown = ChatSection:NewDropdown("Channel Selection","What channel should the player chat in?", channels, function(selection)
+      channel = selection
+  end)
       local dropdown = ChatSection:NewDropdown("Player Selection","Select Player", newList, function(selection)
         playername = selection
       end)
@@ -195,7 +204,7 @@ for i,v in pairs(game.Players:GetPlayers())do
       end)
     ChatSection:NewTextBox("Message", "Message to send as player PRESS ENTER ONCE MESSAGE IS PUT IN", function(txt)
         local args = {
-            [1] = "General",
+            [1] = channel,
             [2] = txt,
             [3] = game:GetService("Players"):WaitForChild(playername)
         }
