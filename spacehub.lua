@@ -225,7 +225,7 @@ for i,v in pairs(game.Players:GetPlayers())do
             "🇺🇦Win the war!🇺🇦"
         }
         local args = {
-            [1] = "General",
+            [1] = channels[math.random(1, #channels)],
             [2] = messages[math.random(1, #messages)],
             [3] = game:GetService("Players"):WaitForChild(playername)
         }
@@ -246,7 +246,7 @@ for i,v in pairs(game.Players:GetPlayers())do
             "🇺🇦Win the war!🇺🇦"
         }
         local args = {
-            [1] = "General",
+            [1] = channels[math.random(1, #channels)],
             [2] = messages[math.random(1, #messages)],
             [3] = game:GetService("Players"):WaitForChild(newList[math.random(1, #newList)])
         }
