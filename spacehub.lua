@@ -185,7 +185,7 @@ for i,v in pairs(game.Players:GetPlayers())do
         playername = selection
       end)
       game.Players.PlayerAdded:Connect(function(player)
-        local name = player.Name
+        local name = aplayer.Name
         table.insert(newList,name)
         dropdown:Refresh(newList)
      end)
