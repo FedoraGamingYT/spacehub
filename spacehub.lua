@@ -171,7 +171,7 @@ elseif  game.PlaceId == 5897938254 then
         "Combative",
         "Hostiles"
       }
-    local ChatSection = Chat:NewSection("Chat as player on radio")
+    local ChatSection = Chat:NewSection("Radio Exploiter Settings")
 local newList = {}
 for i,v in pairs(game.Players:GetPlayers())do
     if v ~= game.Players.LocalPlayer then
@@ -202,7 +202,8 @@ for i,v in pairs(game.Players:GetPlayers())do
       ChatSection:NewButton("refresh players", "refresh players daddy", function()
         dropdown:Refresh(newList) -- we have python at school and ppl learning functions and shit and someone made some type of calculator and its erroring cause of a syntax thing and i said its something with the grammar of the code and he though it was that the code got corrupted
       end)
-    ChatSection:NewTextBox("Message", "Message to send as player PRESS ENTER ONCE MESSAGE IS PUT IN", function(txt)
+    local CEhatSection = Chat:NewSection("Radio Exploiter")
+    CEhatSection:NewTextBox("Message", "Message to send as player PRESS ENTER ONCE MESSAGE IS PUT IN", function(txt)
         local args = {
             [1] = channel,
             [2] = txt,
@@ -210,7 +211,7 @@ for i,v in pairs(game.Players:GetPlayers())do
         }
         game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
     end)    
-    ChatSection:NewButton("Chernobyl The Selected Person", "Bomb radio with the hub with the specific person", function()
+    CEhatSection:NewButton("Bomb The Selected Person", "Bomb radio with the hub with the specific person", function()
         if enabled == true then
             enabled = false
         elseif enabled == false then
@@ -231,7 +232,7 @@ for i,v in pairs(game.Players:GetPlayers())do
         game:GetService("ReplicatedStorage").Events.Functions.Radio.SendMessage:InvokeServer(unpack(args))
     end
     end)
-    ChatSection:NewButton("Chernobyl The Radio", "Bomb radio with the hub", function()
+    CEhatSection:NewButton("Bomb The Radio", "Bomb radio with the hub", function()
         if enabled2 == true then
             enabled2 = false
         elseif enabled2 == false then
